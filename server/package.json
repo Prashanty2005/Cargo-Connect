@@ -1,0 +1,28 @@
+{
+  "name": "load-mate-finder-backend",
+  "version": "1.0.0",
+  "description": "Backend for Load Mate Finder application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "seed": "node src/scripts/seedData.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
+    "@truffle/hdwallet-provider": "^2.1.15",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.0",
+    "truffle": "^5.11.4",
+    "web3": "^4.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

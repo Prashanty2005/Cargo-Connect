@@ -1,0 +1,63 @@
+# -------------------------------------------------------------------
+# 1. Dependency and Build Directories
+# -------------------------------------------------------------------
+
+# Node/Bun dependencies folder
+node_modules/
+**/node_modules/
+bun.lockb
+package-lock.json # Keep if using npm/yarn, but you have bun.lockb
+
+# Vite/TypeScript build output
+dist/
+build/
+out/
+
+# Vite's temporary environment file
+# The content of vite-env.d.ts is often generated/updated by Vite
+
+# -------------------------------------------------------------------
+# 2. Environment Variables and Secrets (CRITICAL)
+# -------------------------------------------------------------------
+
+# Keep your environment variables secure!
+.env
+.env.*
+!.env.example # Keep the example file if you have one
+public/.env* # If you keep public env files in the public folder
+
+# Supabase local environment files/data
+# This prevents checking in local database snapshots or tokens
+supabase/.temp
+supabase/data
+supabase/config.toml # Optional, only if you customize it locally
+
+# -------------------------------------------------------------------
+# 3. IDE and OS Artifacts
+# -------------------------------------------------------------------
+
+# VS Code (common IDE for TS/React projects)
+.vscode/*
+!.vscode/settings.json # Optional: keep team settings
+!.vscode/tasks.json    # Optional: keep team tasks
+!.vscode/launch.json   # Optional: keep team launch configs
+!.vscode/extensions.json # Optional: keep recommended extensions
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# -------------------------------------------------------------------
+# 4. Logs and Test Output
+# -------------------------------------------------------------------
+logs/
+*.log
+coverage/
+
+# -------------------------------------------------------------------
+# 5. Lock Files (Optional depending on usage)
+# -------------------------------------------------------------------
+# If you decide to commit `bun.lockb` for guaranteed builds, remove the line above.
+# Generally, only one lock file should be committed: bun.lockb OR package-lock.json.
+yarn.lock
+pnpm-lock.yaml
